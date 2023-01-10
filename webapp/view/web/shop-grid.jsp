@@ -96,7 +96,7 @@
 
 							<c:if test="${sessionScope.user_session ne null}">
 								<li class="nav-item"><a class="nav-link active"
-									aria-current="page" href="">${sessionScope.user_session.email}
+									aria-current="page" href="">${sessionScope.user_session.name}
 								</a></li>
 
 								<li><a
@@ -169,12 +169,28 @@
                   </g>
                 </svg>
 							</a>
-							<form class="form-inline">
-								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-									<i class="fa fa-search" aria-hidden="true"></i>
+							
+							<form class="d-flex" role="search" action="SearchController"
+								METHOD="post">
+								<input class="form-control me-2" id="searchInput" name="search"
+									placeholder="Search" aria-label="Search">
+								<button class="btn btn-outline-success" type="submit"
+									onclick=" return SumbitJudge()" />
+								>Search
 								</button>
 							</form>
-							<a href="" class="order_online"> Order Online </a>
+							
+							  <script type="text/javascript">
+			function SumbitJudge() {
+			    var input = document.getElementById("searchInput").value;
+			    if (!input) {
+				alert("Nhập nội dung tìm kiếm !");
+				return false;
+			    }
+			    return true;
+			}
+		    </script>
+							
 						</div>
 					</div>
 				</nav>
@@ -193,43 +209,14 @@
 										<h1>Cửa hàng gà rán</h1>
 										<p>Thiên đường gà rán</p>
 										<div class="btn-box">
-											<a href="./shop-grid.jsp" class="btn1"> Order Now </a>
+											<a href="${pageContext.request.contextPath}/allproduct" class="btn1"> Order Now </a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item ">
-						<div class="container ">
-							<div class="row">
-								<div class="col-md-7 col-lg-6 ">
-									<div class="detail-box">
-										<h1>Cửa hàng gà rán</h1>
-										<p>Thiên đường gà rán</p>
-										<div class="btn-box">
-											<a href="" class="btn1"> Order Now </a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="container ">
-							<div class="row">
-								<div class="col-md-7 col-lg-6 ">
-									<div class="detail-box">
-										<h1>Cửa hàng gà rán</h1>
-										<p>Thiên đường gà rán</p>
-										<div class="btn-box">
-											<a href="" class="btn1"> Order Now </a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 				<div class="container">
 					<ol class="carousel-indicators">

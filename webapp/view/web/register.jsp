@@ -226,10 +226,10 @@
 			<div class="row">
 				<div class="col-md-4 footer-col">
 					<div class="footer_contact">
-						<h4>LiÃªn há»</h4>
+						<h4>Liên hệ</h4>
 						<div class="contact_link_box">
 							<a href=""> <i class="fa fa-map-marker" aria-hidden="true"></i>
-								<span> Vá» trÃ­ </span>
+								<span> Vị trí </span>
 							</a> <a href=""> <i class="fa fa-phone" aria-hidden="true"></i> <span>
 									+84 123456789 </span>
 							</a> <a href=""> <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -241,7 +241,7 @@
 				<div class="col-md-4 footer-col">
 					<div class="footer_detail">
 						<a href="" class="footer-logo"> ABC Chicken </a>
-						<p>Cá»­a hÃ ng gÃ rÃ¡n sá» 1 Viá»t Nam</p>
+						<p>Cửa hàng gà rán số 1 Việt Nam</p>
 						<div class="footer_social">
 							<a href=""> <i class="fa fa-facebook" aria-hidden="true"></i>
 							</a> <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -253,9 +253,9 @@
 					</div>
 				</div>
 				<div class="col-md-4 footer-col">
-					<h4>Thá»i gian hoáº¡t Äá»ng</h4>
-					<p>Má»i ngÃ y</p>
-					<p>10:00 sÃ¡ng -10:00 tá»i</p>
+					<h4>Thời gian hoạt động</h4>
+					<p>Mỗi ngày</p>
+					<p>10:00 sáng -10:00 tối</p>
 				</div>
 			</div>
 			<div class="footer-info">

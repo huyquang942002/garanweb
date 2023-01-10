@@ -1,5 +1,6 @@
 package garanweb.dao;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -286,6 +287,49 @@ if (rs.next()) {
 			close(myConn, myStmt, null);
 		}
 	}
+	
+	public List<Product> searchByname(String search) throws SQLException  {
+
+    	List<Product> list = new ArrayList<>();
+    	
+    	String sql = "select * from products where name like ?";
+
+    	Connection myConn = null;
+    	PreparedStatement myStmt = null;
+    	ResultSet myRs = null;
+
+    	try {
+    	    // get a connection
+    	    myConn = Dbcontext.getConnection();
+    	    // create sql statement
+    	    myStmt = myConn.prepareStatement(sql);
+    	    
+    	    myStmt.setString(1,"%"+search+"%");
+
+    	    // execute query
+    	    myRs = myStmt.executeQuery();
+
+    	    // process result set
+    	    while (myRs.next()) {
+
+    		// retrieve data from result set row
+    		int id = myRs.getInt("id");
+    		String name = myRs.getString("name");
+    		String image = myRs.getString("image");
+    		BigDecimal price = myRs.getBigDecimal("price");
+
+    		Product m = new Product(id, name, image,price);
+    		list.add(m);
+    	    }
+
+    	    return list;
+    	} finally {
+    	    // close JDBC objects
+    	    close(myConn, myStmt, myRs);
+    	}
+        }
+	
+	
 public void delete(String theStudentId) throws Exception {
 
 		Connection myConn = null;

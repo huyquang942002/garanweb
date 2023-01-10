@@ -85,7 +85,7 @@
 									bàn</a></li>
 						</ul>
 						<div class="user_option">
-							<a href="" class="user_link"> <i class="fa fa-user"
+							<a href="${pageContext.request.contextPath}/view/web/login.jsp" class="user_link"> <i class="fa fa-user"
 								aria-hidden="true"></i>
 							</a> <a class="cart_link" href="#"> <svg version="1.1"
 									id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -148,12 +148,8 @@
                   </g>
                 </svg>
 							</a>
-							<form class="form-inline">
-								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</button>
-							</form>
-							<a href="" class="order_online"> Order Online </a>
+							
+							<a href="${pageContext.request.contextPath}/allproduct" class="order_online"> Order Online </a>
 						</div>
 					</div>
 				</nav>
